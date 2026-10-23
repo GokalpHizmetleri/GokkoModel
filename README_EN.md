@@ -69,7 +69,7 @@ ollama run gokkomodel
 3. Replaced the default system message inside the chat template with the GokkoModel identity. When the user provides no system message, this identity activates automatically.
 4. Tested with real llama.cpp: "Who are you?" -> "I am GokkoModel.", "Who made you?" -> "I was made by Gökalp Hizmetleri." (temperature 0).
 
-The `.litertlm` build runs on GitHub Actions; to build it on your own machine see [scripts/convert_to_litertlm.sh](scripts/convert_to_litertlm.sh).
+The `.litertlm` build is in progress and will be added to Releases when ready. To build it on your own machine see [scripts/convert_to_litertlm.sh](scripts/convert_to_litertlm.sh).
 
 ## License
 

@@ -69,7 +69,7 @@ ollama run gokkomodel
 3. Sohbet şablonundaki varsayılan sistem mesajı, GokkoModel kimliğiyle değiştirildi. Kullanıcı sistem mesajı vermezse bu kimlik otomatik devreye girer.
 4. Gerçek llama.cpp ile test edildi: "Sen kimsin?" → "Ben GokkoModel.", "Seni kim yaptı?" → "Gökalp Hizmetleri tarafından yapıldım." (temperature 0).
 
-`.litertlm` sürümü GitHub Actions ile üretilir; kendi makinende üretmek istersen: [scripts/convert_to_litertlm.sh](scripts/convert_to_litertlm.sh)
+`.litertlm` sürümü şu an üretiliyor; hazır olunca Releases sayfasına eklenecek. Kendi makinende üretmek istersen: [scripts/convert_to_litertlm.sh](scripts/convert_to_litertlm.sh)
 
 ## Lisans
 
