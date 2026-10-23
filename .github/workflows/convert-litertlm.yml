@@ -1,0 +1,43 @@
+name: Convert to .litertlm
+
+on:
+  workflow_dispatch:
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install converters
+        run: |
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install litert-torch
+
+      - name: Download base model
+        run: |
+          python3 - <<'PY'
+          from huggingface_hub import snapshot_download
+          print(snapshot_download("Qwen/Qwen2.5-0.5B-Instruct"))
+          PY
+
+      - name: Bake GokkoModel identity into chat template
+        run: |
+          CKPT=$(python3 -c "from huggingface_hub import snapshot_download; print(snapshot_download('Qwen/Qwen2.5-0.5B-Instruct'))")
+          python3 scripts/patch_chat_template.py "$CKPT"
+
+      - name: Export .litertlm
+        run: |
+          CKPT=$(python3 -c "from huggingface_hub import snapshot_download; print(snapshot_download('Qwen/Qwen2.5-0.5B-Instruct'))")
+          litert-torch export_hf --model="$CKPT" --output_dir=/tmp/out --use_jinja_template=True -q dynamic_int8
+          ls -la /tmp/out
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: GokkoModel-litertlm
+          path: /tmp/out/*.litertlm
