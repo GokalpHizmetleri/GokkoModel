@@ -23,7 +23,7 @@ Model dosyaları [Releases](../../releases) sayfasındadır:
 | Dosya | Format | Boyut | Ne için |
 |---|---|---|---|
 | `GokkoModel-Q4_K_M.gguf` | GGUF (Q4_K_M) | ~468 MB | llama.cpp, LM Studio, Ollama, Termux |
-| `GokkoModel.litertlm` | LiteRT-LM | yakında | Android (Google AI Edge Gallery, LiteRT-LM) |
+| [`GokkoModel.litertlm`](https://github.com/GokalpHizmetleri/GokkoModel/releases/download/v1.0.0/GokkoModel.litertlm) | LiteRT-LM | 617 MB | Android (Google AI Edge Gallery, LiteRT-LM) |
 
 ## Kullanım
 
@@ -69,7 +69,7 @@ ollama run gokkomodel
 3. Sohbet şablonundaki varsayılan sistem mesajı, GokkoModel kimliğiyle değiştirildi. Kullanıcı sistem mesajı vermezse bu kimlik otomatik devreye girer.
 4. Gerçek llama.cpp ile test edildi: "Sen kimsin?" → "Ben GokkoModel.", "Seni kim yaptı?" → "Gökalp Hizmetleri tarafından yapıldım." (temperature 0).
 
-`.litertlm` sürümü şu an üretiliyor; hazır olunca Releases sayfasına eklenecek. Kendi makinende üretmek istersen: [scripts/convert_to_litertlm.sh](scripts/convert_to_litertlm.sh)
+`.litertlm` sürümü Releases sayfasında hazır. Kendi makinende üretmek istersen: [scripts/convert_to_litertlm.sh](scripts/convert_to_litertlm.sh)
 
 ## Lisans
 
