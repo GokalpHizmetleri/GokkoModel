@@ -1,0 +1,10 @@
+GokkoModel
+Copyright 2026 Gökalp Hizmetleri
+
+This product is derived from Qwen2.5-0.5B-Instruct
+(https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct),
+Copyright (c) Alibaba Cloud, licensed under the Apache License 2.0.
+
+Modifications: metadata fields (name/author/organization/description) and the
+default system message inside the chat template were changed to embed the
+GokkoModel identity. No model weights were modified; no fine-tuning was applied.
