@@ -23,7 +23,7 @@ Model files are on the [Releases](../../releases) page:
 | File | Format | Size | For |
 |---|---|---|---|
 | `GokkoModel-Q4_K_M.gguf` | GGUF (Q4_K_M) | ~468 MB | llama.cpp, LM Studio, Ollama, Termux |
-| `GokkoModel.litertlm` | LiteRT-LM | coming soon | Android (Google AI Edge Gallery, LiteRT-LM) |
+| [`GokkoModel.litertlm`](https://github.com/GokalpHizmetleri/GokkoModel/releases/download/v1.0.0/GokkoModel.litertlm) | LiteRT-LM | 617 MB | Android (Google AI Edge Gallery, LiteRT-LM) |
 
 ## Usage
 
@@ -69,7 +69,7 @@ ollama run gokkomodel
 3. Replaced the default system message inside the chat template with the GokkoModel identity. When the user provides no system message, this identity activates automatically.
 4. Tested with real llama.cpp: "Who are you?" -> "I am GokkoModel.", "Who made you?" -> "I was made by Gökalp Hizmetleri." (temperature 0).
 
-The `.litertlm` build is in progress and will be added to Releases when ready. To build it on your own machine see [scripts/convert_to_litertlm.sh](scripts/convert_to_litertlm.sh).
+The `.litertlm` build is available on the Releases page. To build it on your own machine see [scripts/convert_to_litertlm.sh](scripts/convert_to_litertlm.sh).
 
 ## License
 
